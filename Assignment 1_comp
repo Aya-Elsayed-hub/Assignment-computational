@@ -4,37 +4,37 @@
 # In[1]:
 
 
-# Define tanh activation function
+
 def tanh(x):
     return (2 / (1 + (2.71828 ** (-2 * x)))) - 1
 
-# Initialize inputs
+
 i1, i2 = 0.05, 0.10
 
-# Initialize biases
+
 b1, b2 = 0.5, 0.7
 
 # Manually initialize weights in range [-0.5, 0.5]
 w1, w2, w3, w4 = 0.1, -0.2, 0.3, -0.4
 w5, w6, w7, w8 = 0.2, -0.1, 0.4, -0.3
 
-# Compute hidden layer neuron inputs
+
 net_h1 = w1 * i1 + w2 * i2 + b1
 net_h2 = w3 * i1 + w4 * i2 + b1
 
-# Compute hidden layer outputs
+
 out_h1 = tanh(net_h1)
 out_h2 = tanh(net_h2)
 
-# Compute output layer neuron inputs
+
 net_o1 = w5 * out_h1 + w6 * out_h2 + b2
 net_o2 = w7 * out_h1 + w8 * out_h2 + b2
 
-# Compute output layer outputs
+
 out_o1 = tanh(net_o1)
 out_o2 = tanh(net_o2)
 
-# Print results
+
 print("Hidden layer outputs:")
 print("h1:", out_h1)
 print("h2:", out_h2)
